@@ -32,9 +32,34 @@ public class Feed extends List<FeedItem> {
     
   }
   
-  public void sortierFunktion() {
-    
+  public void suchFunktionPerZeit (LocalDateTime gesucht) {
+    gesucht = gesucht.this;
+    Node current = head;
+    while (current != null){ 
+      if (current.time == gesucht) {
+        return true;
+        System.out.println("Es wurde ein Element mit der Zeit " gesucht " in Liste gefunden");}
+      else{
+        current = current.next; }
+      } 
+      return false;
+      System.out.println("Es wurde KEIN (weiteres) Element mit der Zeit " gesucht " in Liste gefunden");}
   }
+  
+  public void suchFunktionPerID (int gesucht) {
+    gesucht = gesucht.this;
+    Node current = head;
+    while (current != null){ 
+      if (current.id == gesucht) {
+        return true;
+        System.out.println("Es wurde ein Element mit der ID " gesucht " in Liste gefunden");}
+      else{
+        current = current.next; }
+      } 
+      return false;
+      System.out.println("Es wurde KEIN (weiteres) Element mit der ID " gesucht " in Liste gefunden");}
+  }
+
   
   public void weiteres() {
     
