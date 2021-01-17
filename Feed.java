@@ -14,38 +14,39 @@ public class Feed extends List<FeedItem> {
 
   public void printOutputLong() {
     toFirst();
-    while(hasAccess()){
+    while (hasAccess()) {
       System.out.println(getContent().toString());
       next();
     }
   }
-  
+
   public void printOutputShort() {
     toFirst();
-    while(hasAccess()){
+    while (hasAccess()) {
       System.out.println(getContent().toString());
       next();
     }
   }
-  
+
   public void teilListe() {
-    
+
   }
-  
+
   public void suchFunktionPerZeit (LocalDateTime gesucht) {
-    gesucht = gesucht.this;
-    Node current = head;
-    while (current != null){ 
-      if (current.time == gesucht) {
-        return true;
-        System.out.println("Es wurde ein Element mit der Zeit " gesucht " am Knoten " current " mit der ID " current.id " gefunden.");}
+    toFirst();
+    while (hasAccess()){ 
+      if (getContent().getTime() == gesucht) {
+        System.out.println("Es wurde ein Element" +getContent().toString()+ " gefunden.");
+        return; 
+      }
       else{
-        current = current.next; }
+        next();
       } 
-      return false;
-      System.out.println("Es wurde KEIN (weiteres) Element mit der Zeit " gesucht " in Liste gefunden");
+      System.out.println("Es wurde KEIN (weiteres) Element in Liste gefunden");
+      return;
+    }
   }
-  
+
   public void suchFunktionPerID (int gesucht) {
     gesucht = gesucht.this;
     Node current = head;
@@ -60,11 +61,8 @@ public class Feed extends List<FeedItem> {
       System.out.println("Es wurde KEIN (weiteres) Element mit der ID " gesucht " in Liste gefunden");
   }
 
-  
   public void weiteres() {
-    
+
   }
-  
-  
 
 }
