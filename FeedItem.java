@@ -1,6 +1,6 @@
 
 /**
- * Die klasse FeedItem ist die Contentklasse zum Feed.
+ * Die Klasse FeedItem ist die Contentklasse zum Feed.
  * 
  * @author Gareth
  * @version 06.01.2021
@@ -17,9 +17,10 @@ public class FeedItem {
 	private int id;
 
 	/**
-	 * Der Construktor der Klasse FeedItem Den instanzvariablen werden Beispile
-	 * zugewiesen, wobei auch eine id erzeugt wird, die maxiaml 9 Stellig ist. Die
-	 * wahrscheinlichkeit, dass zwei Feedistems die gleiche id haben ist seht gering
+	 * Der Construktor der Klasse FeedItem
+	 * Den Instanzvariablen werden Beispiele
+	 * zugewiesen, wobei auch eine ID erzeugt wird, die maxiaml 9-stellig ist. Die
+	 * Wahrscheinlichkeit, dass zwei Feed-Items die gleiche ID haben, ist seht gering
 	 * und damit vernachläßigbar.
 	 */
 	public FeedItem() {
@@ -29,16 +30,16 @@ public class FeedItem {
 	}
 
 	/**
-	 * Dne Pfad zum Image ändern
+	 * Den Pfad zum Image ändern
 	 * 
-	 * @param newImageSrc der neu Pfad
+	 * @param newImageSrc der neue Pfad
 	 */
 	public void changeImageSrc(String newImageSrc) {
 		imageSrc = newImageSrc;
 	}
 
 	/**
-	 * Die Zeit ändern,
+	 * Die Zeit ändern
 	 * 
 	 * @param newTime die neue Zeit
 	 */
@@ -47,7 +48,7 @@ public class FeedItem {
 	}
 
 	/**
-	 * die id ausgeben
+	 * Die ID ausgeben
 	 * 
 	 * @return die id als int
 	 */
@@ -56,7 +57,7 @@ public class FeedItem {
 	}
 
 	/**
-	 * den Imaga Pfad ausgeben
+	 * Den Imagage Pfad ausgeben
 	 * 
 	 * @return den Image Pfad als String
 	 */
@@ -65,7 +66,7 @@ public class FeedItem {
 	}
 
 	/**
-	 * die Zeit ausgeben
+	 * Die Zeit ausgeben
 	 * 
 	 * @return die Zeit als LocalDateTime
 	 */
@@ -74,7 +75,7 @@ public class FeedItem {
 	}
 
 	/**
-	 * den Inhalt des Objetes ausgeben
+	 * Den Inhalt des Objetes ausgeben
 	 * 
 	 * @return der Inhalt im folgendem Muster als String: "id: <id> imageSrc:
 	 *         <imageSrc> time: DD.MM.YYYY"
@@ -114,8 +115,8 @@ public class FeedItem {
 	}
 
 	/**
-	 * Überprüfun, ob nicht der sehr unwarscheinlcihe Fall eingetreten ist, dass
-	 * zwei FeedItmes die selbe id haben
+	 * Überprüfung, ob nicht der sehr unwahrscheinliche Fall eingetreten ist, dass
+	 * zwei FeedItmes die selbe ID haben
 	 * 
 	 * @param compareFeedItem das andere FeedItem
 	 * @return den Wahrheitswert
