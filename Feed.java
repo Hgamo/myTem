@@ -12,7 +12,15 @@ public class Feed extends List<FeedItem> {
     append(feedItem);
   }
 
-  public void printOutput() {
+  public void printOutputLong() {
+    toFirst();
+    while(hasAccess()){
+      System.out.println(getContent().toString());
+      next();
+    }
+  }
+  
+  public void printOutputShort() {
     toFirst();
     while(hasAccess()){
       System.out.println(getContent().toString());
