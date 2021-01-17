@@ -32,19 +32,15 @@ public class Feed extends List<FeedItem> {
 
   }
 
-  public void suchFunktionPerZeit (LocalDateTime gesucht) {
+  public void suchFunktionPerZeit(LocalDateTime gesucht) {
     toFirst();
-    while (hasAccess()){ 
-      if (getContent().getTime() == gesucht) {
-        System.out.println("Es wurde ein Element" +getContent().toString()+ " gefunden.");
-        return; 
+    while (hasAccess()) {
+      if (getContent().isFromSameData(gesucht)) {
+        System.out.println("Es wurde ein Element" + getContent().toString() + " gefunden.");
       }
-      else{
-        next();
-      } 
-      System.out.println("Es wurde KEIN (weiteres) Element in Liste gefunden");
-      return;
+      next();
     }
+    System.out.println("Es wurde KEIN (weiteres) Element in Liste gefunden");
   }
 
   public void suchFunktionPerID (int gesucht) {

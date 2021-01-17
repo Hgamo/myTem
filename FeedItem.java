@@ -92,9 +92,9 @@ public class FeedItem {
 	 * @return den Wahrheitswert
 	 */
 
-	public boolean isFromSameData(FeedItem compareFeedItem) {
-		if (compareFeedItem.time.getDayOfYear() == time.getDayOfYear()
-				|| compareFeedItem.time.getYear() == time.getYear()) {
+	public boolean isFromSameData(LocalDateTime compareFeedItemDate) {
+		if (compareFeedItemDate.getDayOfYear() == time.getDayOfYear()
+				|| compareFeedItemDate.getYear() == time.getYear()) {
 			return true;
 		} else {
 			return false;
