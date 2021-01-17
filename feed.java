@@ -15,7 +15,7 @@ public class Feed extends List<FeedItem> {
   public void printOutput() {
     toFirst();
     while(hasAccess()){
-      System.out.println(getContent().getId());
+      System.out.println(getContent().toString());
       next();
     }
   }
