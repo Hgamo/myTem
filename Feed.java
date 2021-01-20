@@ -2,7 +2,7 @@
 /**
  * Die Klasse Feed ist die Listklasse und enthält die FeedItems.
  * 
- * @author Vitus und Fabian
+ * @author Vitus, (Fabian)
  * @version 17.01.2021
  */
 import java.time.LocalDateTime;
