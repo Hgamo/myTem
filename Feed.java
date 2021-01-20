@@ -81,12 +81,14 @@ public class Feed extends List<FeedItem> {
 	 * 
 	 * Das ist unsere weitere selbstgewählte nicht triviale Fähigkeit.
    *
-   * Der Verweis auf den ersten Knoten wird gelöscht. So wird eine Kettenreaktion losgetreten, die dazu führt, dass auf keinen weiteren Knoten mehr verwiesen wird und so der gesamte Inhalt gelöscht ist.
+   * Die Funktion entfernt einen Knoten nach dem anderen. Damit werden alle Inhalte gelöscht. Eine andere Möglichkeit wäre, durch das Löschen des ersten Knotens eine Kettenreaktion wegen fehlender Verweise aufeinander loszutreteten.
    *
    * @author Vitus
 	 */
   public void allesLoeschen() {
-    head = null;
+	while(hasAcces()){
+		remove()
+	}
   }
 
 }
