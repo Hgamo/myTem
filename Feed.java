@@ -26,7 +26,7 @@ public class Feed extends List<FeedItem> {
    * Eigenschaften des ersten Items als String, danach wandert die Funktion alle
    * Knoten dahinter ab.
    * 
-   * @author Gareth, Fabian, Vitus
+   * @author Vitus
    */
   public void printOutputLong() {
     toFirst();
@@ -56,7 +56,18 @@ public class Feed extends List<FeedItem> {
     System.out.println(count + " Items im Feed");
 
   }
-
+  /**
+   * Erstellen einer Teilliste für Items von einem bestimmten Tag
+   * 
+   * @param day Der jeweilige Tag, für den eine Teilliste erstellt werden soll. 
+   * Nur Items, die an diesem Tag erstellt worden, sind Teil der ausgegebenen Teilliste. 
+   * Das Format ist LocalDateTime, es geht also um die Ortszeit.
+   *
+   * @return newFeed Der neue Feed (Teilliste) nur mit Items des Tages day.
+   *
+   * @author Vitus
+   */
+  
   public Feed alleFeedItemsVonEinemTag(LocalDateTime day) {
     Feed newFeed = new Feed();
     toFirst();
@@ -72,15 +83,14 @@ public class Feed extends List<FeedItem> {
   /**
    * Suchfunktion über Zeit
    * 
-   * @param gesucht Die gesuchte Zeit (Eegen des LocalDateTime Formats ist eine
-   *                sehr genaue Angabe nötig, alternativ kann auch eine Zeitspanne
-   *                für grobe Angaben implementiert werden)
+   * @param gesucht Die gesuchte Zeit (Wegen des LocalDateTime Formats ist eine
+   *                sehr genaue Angabe nötig, für einzelne Tage kann mit alleFeedItemsVonEinemTag eine Teilliste erstellt werden)
    *
    *                Die Funktion vergleicht den Inhalt bei jedem Knoten mit dem
    *                gesuchten Wert und schreitet bei fehlender Übereinstimmung die
    *                Knoten weiter ab. Die Funktion gibt aus, ob ein Ergebnis
    *                gefunden wurde oder nicht und verweist dabei auf den Inhalt
-   *                bei dem Knoten.
+   *                des Knotens.
    *
    * @author Vitus
    */
