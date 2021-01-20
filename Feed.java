@@ -1,6 +1,7 @@
 
 /**
- * Die Klasse Feed ist die Listklasse und enthält die FeedItems.
+ * Die Klasse Feed ist die Listklasse und enthält die FeedItems. 
+ * Ähnlich wie ein Instagram-Feed sind also alle Objekte der Content Klasse im Feed aneinander gereiht.
  * 
  * @author Vitus, (Fabian)
  * @version 17.01.2021
